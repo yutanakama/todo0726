@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import {InputTodo} from './component/inputTodo';
-import {incompleteTodos} from './component/incompleteTodos';
-import {completeTodos} from './component/completeTodos';
+import {IncompleteTodos} from './component/incompleteTodos';
+import {CompleteTodos} from './component/completeTodos';
 
 function App() {
   const[todoText,setTodoText] = useState([""]);
@@ -45,8 +45,8 @@ function App() {
   return (
     <>
    <InputTodo todoText={todoText} onChange={onChangeTodoText} onClick={onClickadd} />
-   <incompleteTodos todos={incompleteTodos} onclickComplete={onclickComplete} onClickDelete={onClickDelete} />
-   <completeTodos todos={completeTodos} onclickBack={onclickBack} />
+   <IncompleteTodos todos={incompleteTodos} onclickComplete={onclickComplete} onClickDelete={onClickDelete} />
+   <CompleteTodos todos={completeTodos} onclickBack={onclickBack} />
     </>
    
   );
